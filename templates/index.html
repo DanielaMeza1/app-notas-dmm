@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block titulo %} Pagina principal {% endblock %}
+
+{% block contenido %}
+<!--<h1>Hola Mundo :) </h1>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil perspiciatis, nulla, deleniti ipsam amet delectus perferendis voluptas aliquid debitis nostrum saepe ad facere. Libero sit nihil expedita ipsam! Ducimus, similique!
+</p>
+<h1>Bienvenido</h1>
+<p>Nombres</p>
+{% for nombre in variable %}
+    <p>{{nombre}}</p>
+    {% endfor %}
+-->
+
+<form action="/crearnota" method="post">
+    <label for="titulo">Titulo de la nota:</label><br>
+    <input type="text" id="campotitulo" name="campotitulo" value="">
+    <br>
+    <label for="cuerpo">Cuerpo de la nota:</label><br>
+    <input type="text" id="campocuerpo" name="campocuerpo" value="">
+    <input type="submit" value="Crear nota">
+  </form>
+
+  <!--<h2>Listado de notas</h2>
+  <p>{{consulta}}</p>-->
+  <table>
+    {% for nota in consulta %}
+    <tr>
+        <td>{{nota.tituloNota}}</td>
+        <td>{{nota.cuerpoNota}}</td>
+        <td><a href="/eliminarnota/{{nota.idNota}}">Eliminar</a></td>
+        <td><a href="/editarnota/{{nota.idNota}}">Editar</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+  {% endblock %}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+{% block head %}
+
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block titulo %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="/static/css/estilo.css"/>
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+<h1>Aplicacion de notas</h1>
+{% block encabezado %}
+<!--<img src="https://pokecharms.com/data/attachment-files/2016/12/422192_Cyndah.Pixel.png", alt="Imagen",
+width="200"
+height="200">
+-->
+{% endblock %}
+
+{% block contenido %}
+<h1>Contenido</h1>
+{% endblock %}
+
+{% block pie %}
+<!--<h1>Pie de pagina</h1>-->
+<h2>Hecho por: Daniela Meza Michel No. Control: 18460467 Materia: Servicios de la nube</h2>
+{% endblock %} 
+</body>
+{% endblock %}
+</html>
