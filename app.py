@@ -9,7 +9,7 @@ db = SQLAlchemy(app)
 
 # postgresql://<nombre_usuario>:<password>@<host>:<puerto>/<nombre_basededatos>
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1234@localhost:5432/notas'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://tpxegqeqahlylf:31df7a5df3092373caa135123ba7a96dbf96ef650f604563ebf829e52700b99b@ec2-52-86-193-24.compute-1.amazonaws.com:5432/d2vj69cl9ivj2a'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 
 class Notas(db.Model):
